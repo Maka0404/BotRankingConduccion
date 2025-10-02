@@ -1,3 +1,11 @@
+/* ¡AÑADE ESTO AL PRINCIPIO DE TU ARCHIVO CSS! */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ------------------------------------------- */
+
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -63,4 +71,39 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+/* ESTILOS PARA EL NAVBAR */
+/* --- Estilos CSS para el Navbar --- */
+
+.navbar-list {
+    /* CLAVE para la horizontalidad */
+    display: flex; 
+    
+    /* Permite que la lista ocupe el ancho y separe los ítems */
+    width: 100%; 
+    
+    /* Quita los puntos y el padding por defecto */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* Alineación vertical */
+    align-items: center; 
+}
+
+/* CLAVE para enviar el resto de los ítems a la derecha */
+.navbar-list .navbar-logo {
+    margin-right: auto;
+}
+
+/* Agrega el espacio entre los ítems a la derecha */
+.navbar-list li {
+    margin-left: 32px; /* Espacio entre los links, similar a space-x-8 */
+}
+
+/* Asegúrate de que el logo no tenga el margen izquierdo que aplicamos a los demás */
+.navbar-list .navbar-logo {
+    margin-left: 0;
 }
