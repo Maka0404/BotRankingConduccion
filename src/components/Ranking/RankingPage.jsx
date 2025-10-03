@@ -33,7 +33,6 @@ const RankingPage = () => {
 
   return (
     <div>
-      <h2>Ranking</h2>
       <FiltrosRanking onFilter={handleFiltro} />
       <RankingTabla data={data} />
     </div>
