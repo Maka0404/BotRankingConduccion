@@ -27,7 +27,7 @@ const FiltrosConductores = ({ onFilter }) => {
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between", // Inputs a la izquierda, botones a la derecha
+          justifyContent: "space-between",
           alignItems: "center",
         }}
       >

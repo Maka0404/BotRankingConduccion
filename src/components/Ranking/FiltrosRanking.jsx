@@ -35,7 +35,7 @@ const FiltrosRanking = ({ onFilter }) => {
             <label>Vehículo:</label>
             <input
               type="text"
-              placeholder="Ej: ABC-123"
+              placeholder="Ej:  Objeto 1"
               value={vehiculo}
               onChange={(e) => setVehiculo(e.target.value)}
             />

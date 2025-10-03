@@ -1,5 +1,4 @@
 const TablaConductores = ({ data }) => {
-  // Mapeo de nombres técnicos a nombres amigables en español
   const columnNames = {
     id: "ID",
     fecha: "Fecha",
