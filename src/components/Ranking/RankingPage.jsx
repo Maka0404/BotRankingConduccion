@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import FiltrosRanking from "./FiltrosRanking";
-import TablaRanking from "./TablaRanking";
+import RankingTabla from "./RankingTabla";
 
 const RankingPage = () => {
   const [data, setData] = useState([]);
@@ -35,7 +35,7 @@ const RankingPage = () => {
     <div>
       <h2>Ranking</h2>
       <FiltrosRanking onFilter={handleFiltro} />
-      <TablaRanking data={data} />
+      <RankingTabla data={data} />
     </div>
   );
 };

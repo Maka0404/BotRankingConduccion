@@ -1,4 +1,4 @@
-const TablaRanking = ({ data }) => {
+const RankingTabla = ({ data }) => {
   if (!data || data.length === 0) {
     return <p>No hay datos disponibles.</p>;
   }
@@ -51,4 +51,4 @@ const TablaRanking = ({ data }) => {
   );
 };
 
-export default TablaRanking;
+export default RankingTabla;
