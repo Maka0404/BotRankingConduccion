@@ -16,7 +16,7 @@ const MainTabs = ({ activeTab, setActiveTab }) => {
       </button>
 
       <button
-        onClick={() => setActiveTab("alertas")}
+        onClick={() => setActiveTab("ranking")}
         style={{
           padding: "10px 20px",
           borderRadius: "8px",

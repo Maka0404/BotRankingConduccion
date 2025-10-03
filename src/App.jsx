@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MainTabs from "./components/Tabs/MainTabs";
 import ConductoresPage from "./components/Conductores/ConductoresPage";
-import AlertasPage from "./components/Alertas/AlertasPage";
+import RankingPage from "./components/Ranking/RankingPage";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ChatbotButtonAndWindow from './components/ChatbotButtonAndWindow'; // Importa el nuevo componente
@@ -29,7 +29,7 @@ function App() {
         {activeTab === "conductores" ? (
           <ConductoresPage />
         ) : (
-          <AlertasPage />
+          <RankingPage />
         )}
       </main>
 
