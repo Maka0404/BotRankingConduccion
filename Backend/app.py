@@ -3,6 +3,7 @@ from flask_cors import CORS
 from google import genai
 from google.genai import types
 import os
+import csv
 
 # --- INICIALIZACIÓN Y SEGURIDAD ---
 
@@ -61,6 +62,25 @@ def ask_bot():
         # Manejar errores durante la llamada a la API (e.g., límites de tokens, errores internos)
         print(f"Error al llamar a la API de Gemini: {e}")
         return jsonify({"error": "Ocurrió un error interno al generar la respuesta del bot."}), 500
+
+# --- ENDPOINT PARA LEER DATA.CSV ---
+
+@app.route('/reportes', methods=['GET'])
+def get_reportes():
+    try:
+        reportes = []
+        csv_path = os.path.join(os.path.dirname(__file__), '../data/data.csv')
+        csv_path = os.path.abspath(csv_path)
+
+        with open(csv_path, mode='r', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                reportes.append(row)
+
+        return jsonify(reportes), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # --- EJECUCIÓN DEL SERVIDOR ---
 
