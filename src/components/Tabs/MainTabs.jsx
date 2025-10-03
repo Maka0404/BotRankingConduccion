@@ -21,12 +21,12 @@ const MainTabs = ({ activeTab, setActiveTab }) => {
           padding: "10px 20px",
           borderRadius: "8px",
           border: "1px solid #ccc",
-          background: activeTab === "alertas" ? "#d8c8f0" : "#fff",
-          fontWeight: activeTab === "alertas" ? "bold" : "normal",
+          background: activeTab === "ranking" ? "#d8c8f0" : "#fff",
+          fontWeight: activeTab === "ranking" ? "bold" : "normal",
           cursor: "pointer",
         }}
       >
-        Alertas
+        Ranking
       </button>
     </div>
   );
