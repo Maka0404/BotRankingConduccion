@@ -28,9 +28,22 @@ const ConductoresPage = () => {
     }
 
     if (vehiculo && vehiculo.trim() !== "") {
-      filtrados = filtrados.filter((item) =>
-        item.vehiculo.toLowerCase().includes(vehiculo.toLowerCase())
+      const vehiculoBusqueda = vehiculo.trim().toLowerCase();
+      
+      // Primero intentar búsqueda exacta
+      const coincidenciasExactas = filtrados.filter(
+        (item) => item.vehiculo.toLowerCase() === vehiculoBusqueda
       );
+      
+      // Si hay coincidencias exactas, usar esas; si no, buscar coincidencias parciales
+      if (coincidenciasExactas.length > 0) {
+        filtrados = coincidenciasExactas;
+      } else {
+        // Búsqueda parcial solo si no hay coincidencias exactas
+        filtrados = filtrados.filter((item) =>
+          item.vehiculo.toLowerCase().includes(vehiculoBusqueda)
+        );
+      }
     }
 
     // Aplicar ordenamiento si se seleccionó un campo

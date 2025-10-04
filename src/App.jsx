@@ -27,7 +27,7 @@ function App() {
       >
         <MainTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         {activeTab === "conductores" ? (
-          <ConductoresPage />
+        <ConductoresPage />
         ) : (
           <RankingPage />
         )}

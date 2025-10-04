@@ -84,7 +84,7 @@ const FiltrosConductores = ({ onFilter }) => {
               }}
             >
               <option value="">-- Sin ordenar --</option>
-              <option value="puntos_peligrosos_100km">Puntos de Peligrosidad por 100km</option>
+              <option value="puntos_peligrosos_100km">Puntos de riesgo por 100km</option>
               <option value="exceso_velocidad_pct">Exceso de Velocidad (%)</option>
               <option value="frenado_extremo_100km">Frenados Extremos por 100km</option>
               <option value="frenado_brusco_100km">Frenados Bruscos por 100km</option>
