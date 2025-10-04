@@ -85,16 +85,16 @@ const FiltrosConductores = ({ onFilter }) => {
             >
               <option value="">-- Sin ordenar --</option>
               <option value="puntos_peligrosos_100km">Puntos de riesgo por 100km</option>
-              <option value="exceso_velocidad_pct">Exceso de Velocidad (%)</option>
-              <option value="frenado_extremo_100km">Frenados Extremos por 100km</option>
-              <option value="frenado_brusco_100km">Frenados Bruscos por 100km</option>
-              <option value="aceleracion_brusca_100km">Aceleraciones Bruscas por 100km</option>
-              <option value="ralenti_excesivo_pct">Ralentí Excesivo (%)</option>
+              <option value="exceso_velocidad_pct">Exceso de velocidad (%)</option>
+              <option value="frenado_extremo_100km">Frenados extremos por 100km</option>
+              <option value="frenado_brusco_100km">Frenados bruscos por 100km</option>
+              <option value="aceleracion_brusca_100km">Aceleraciones bruscas por 100km</option>
+              <option value="ralenti_excesivo_pct">Ralentí excesivo (%)</option>
             </select>
           </div>
 
           <div>
-            <label style={{ display: "block", marginBottom: "5px" }}>Tipo de orden:</label>
+            <label style={{ display: "block", marginBottom: "5px" }}></label>
             <select
               value={tipoOrden}
               onChange={(e) => setTipoOrden(e.target.value)}
