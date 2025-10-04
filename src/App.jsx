@@ -1,16 +1,14 @@
 import ConductoresPage from "./components/Conductores/ConductoresPage";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
-import ChatbotButtonAndWindow from './components/ChatbotButtonAndWindow'; // Importa el nuevo componente
+import ChatbotButtonAndWindow from "./components/ChatbotButtonAndWindow";
 
-
-function App() {
+export default function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Menú superior */}
+    
       <Navbar />
 
-      {/* Contenido principal */}
       <main
         className="flex-grow"
         style={{
@@ -23,13 +21,9 @@ function App() {
         <ConductoresPage />
       </main>
 
-      {/* ¡Agrega el componente del chat aquí! */}
       <ChatbotButtonAndWindow />
 
-      {/* Footer */}
       <Footer />
     </div>
   );
 }
-
-export default App;
