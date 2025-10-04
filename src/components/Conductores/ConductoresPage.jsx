@@ -19,9 +19,10 @@ const ConductoresPage = () => {
       });
   }, []);
 
-  const handleFiltro = ({ fecha, vehiculo }) => {
-    let filtrados = backupData;
+  const handleFiltro = ({ fecha, vehiculo, ordenarPor, tipoOrden }) => {
+    let filtrados = [...backupData];
 
+    // Aplicar filtros de fecha y vehículo
     if (fecha && fecha !== "") {
       filtrados = filtrados.filter((item) => item.fecha === fecha);
     }
@@ -30,6 +31,20 @@ const ConductoresPage = () => {
       filtrados = filtrados.filter((item) =>
         item.vehiculo.toLowerCase().includes(vehiculo.toLowerCase())
       );
+    }
+
+    // Aplicar ordenamiento si se seleccionó un campo
+    if (ordenarPor && ordenarPor !== "") {
+      filtrados.sort((a, b) => {
+        const valorA = parseFloat(a[ordenarPor]) || 0;
+        const valorB = parseFloat(b[ordenarPor]) || 0;
+        
+        if (tipoOrden === "asc") {
+          return valorA - valorB; // Ascendente
+        } else {
+          return valorB - valorA; // Descendente
+        }
+      });
     }
 
     setData(filtrados);
